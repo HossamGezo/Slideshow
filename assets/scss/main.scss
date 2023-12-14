@@ -1,0 +1,47 @@
+// Import All Using Helpers Directory
+@use "helpers/usinghelpers" as *;
+
+// Begining Of The Project
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial;
+  height: 100vh;
+  @include flex(null, null, center, center, null);
+}
+.container {
+  width: 80%;
+  padding: 0 10px;
+  margin: 0 auto;
+  @include flex(null, null, center, center, null);
+}
+
+// Begining Of The Project
+.slideshow {
+  @include flex(column, null, center, center, null);
+  &-image {
+    margin-bottom: 50px;
+    border: 3px solid orange;
+    padding: 10px;
+    border-radius: 10px;
+    @include flex(null, null, center, center, null);
+    img {
+      width: 700px;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 10px;
+      line-height: 0;
+      font-size: 0;
+    }
+  }
+  &-head {
+    background-color: color(blk-color-01);
+    color: color(wht-color-01);
+    padding: 20px;
+    border-radius: 7px;
+  }
+}
